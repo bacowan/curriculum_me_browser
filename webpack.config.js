@@ -5,12 +5,12 @@ module.exports = {
       filename: 'bundle.js'
     },
     module: {
-      loaders: [
+      rules: [
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
-          query: { presets: [ 'es2015', 'react' ] }
+          query: { presets: ["@babel/preset-env", "@babel/preset-react"] }
         }
       ]
     }
